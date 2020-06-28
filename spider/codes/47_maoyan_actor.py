@@ -29,6 +29,7 @@ def get_xpath(url):
     if response.status_code == 200:
         return etree.HTML(response.text)
     else:
+        print(response.status_code)
         return None
 
 
@@ -39,9 +40,20 @@ def parse_actor(html):
     :return:返回相关演员
     '''
     # 获取中文名
-    china_name = get_text(html.xpath('//p[@class="china-name cele-name"]/text()'))
+    
+    china_name = html.xpath('/html/body/div[3]/div/div[2]/div[1]/p[1]/text()')
+    print(china_name)
     # 获取英文名
-    en_name = get_text(html.xpath('//p[@class="eng-name cele-name"]/text()'))
+    # en_name = get_text(html.xpath('//p[@class="eng-name cele-name"]/text()'))
+    # 获取职业名
+    # profession = get_text(html.xpath('//span[@class="profession"]/text()'))
+    # 获取出生日期
+    # birthday = get_text(html.xpath('//span[@class="birthday"]/text()'))
+    # 获取身高
+    # height = get_text(html.xpath('//span[@class="height"]/text()'))
+    # 获取代表作
+    # master_works = html.xpath('//ul[@class="master-item"]/li/a/img/@alt')
+    # print(master_works)
 
 def get_text(text):
     if text is not None:
