@@ -10,9 +10,12 @@
 ------------------------------------
 @ModifyTime     :  
 """
+import time
+
 import requests
 from lxml import etree
 from queue import Queue
+from selenium import webdriver
 '''
 1.爬取策略：从一个明星的相关人那里去找下一个演员
 2.如何爬取更多：设置初始任务池--池里可以放：港台，大陆等
@@ -25,14 +28,16 @@ def get_xpath(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36',
 
     }
-    response = requests.get(url,headers=headers)
-    if response.status_code == 200:
-        print(response.text)
-        return etree.HTML(response.text)
-    else:
-        print(response.status_code)
-        return None
-
+    driver.get(url)
+    # response = requests.get(url,headers=headers)
+    # if response.status_code == 200:
+    #     print(response.text)
+    #     return etree.HTML(response.text)
+    # else:
+    #     print(response.status_code)
+    #     return None
+    print(driver.page_source)
+    return driver.page_source
 
 def parse_actor(html):
     """
@@ -73,9 +78,12 @@ def url_seen(url):
 
 
 def main():
+
     while not q_actor.empty():
-        html = get_xpath(q_actor.get())
+        html = etree.HTML(get_xpath(q_actor.get()))
         # 提取信息保存，获取相关人返回
+        time.sleep(10)
+        # driver.implicitly_wait(10)
         related_actor_urls = parse_actor(html)
         if related_actor_urls is not None:
             for url in related_actor_urls:
@@ -87,6 +95,7 @@ def main():
 
 
 if __name__ == '__main__':
+    driver = webdriver.Chrome()
     # start_urls
     actor_url = ['https://maoyan.com/films/celebrity/789',# 成龙
                  'https://maoyan.com/films/celebrity/3718', # 安妮海瑟薇
