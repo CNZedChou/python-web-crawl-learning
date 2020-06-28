@@ -27,6 +27,7 @@ def get_xpath(url):
     }
     response = requests.get(url,headers=headers)
     if response.status_code == 200:
+        print(response.text)
         return etree.HTML(response.text)
     else:
         print(response.status_code)
@@ -34,11 +35,11 @@ def get_xpath(url):
 
 
 def parse_actor(html):
-    '''
+    """
     解析页面
     :param html:
     :return:返回相关演员
-    '''
+    """
     # 获取中文名
     
     china_name = html.xpath('/html/body/div[3]/div/div[2]/div[1]/p[1]/text()')
@@ -63,11 +64,11 @@ def get_text(text):
 
 
 def url_seen(url):
-    '''
+    """
     判断url是否重复
     :param url:
     :return: True 重复；False 不重复
-    '''
+    """
 
 
 
