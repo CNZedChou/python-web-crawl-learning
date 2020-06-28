@@ -38,6 +38,16 @@ def parse_actor(html):
     :param html:
     :return:返回相关演员
     '''
+    # 获取中文名
+    china_name = get_text(html.xpath('//p[@class="china-name cele-name"]/text()'))
+    # 获取英文名
+    en_name = get_text(html.xpath('//p[@class="eng-name cele-name"]/text()'))
+
+def get_text(text):
+    if text is not None:
+        return text[0]
+    else:
+        return None
 
 
 def url_seen(url):
