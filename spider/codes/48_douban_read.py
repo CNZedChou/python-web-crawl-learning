@@ -99,7 +99,7 @@ def parse_detail(item):
         item['collect_num'] = collect_num
         item['monthly_ticket'] = monthly_ticket
         item['total_ticket'] = total_ticket
-        write_to_mongo(item)
+    write_to_mongo(item)
 
 
 def parse_ajax(read_type, read_index):
