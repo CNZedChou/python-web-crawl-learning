@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3684bec4-a397-449f-8a11-be6d600c7a98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codes/48_douban_read.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codes/48_douban_read_oop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/codes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,10 +36,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\py_project\spider\codes" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\py_project\spider\codes" />
     </key>
   </component>
@@ -213,7 +213,7 @@
       <workItem from="1593335435904" duration="2551000" />
       <workItem from="1593351427699" duration="2455000" />
       <workItem from="1593353915217" duration="6091000" />
-      <workItem from="1593395993012" duration="6011000" />
+      <workItem from="1593395993012" duration="8127000" />
     </task>
     <task id="LOCAL-00001" summary="add some methods">
       <created>1593352980716</created>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593396312013</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="use requests to crawl the information about douban read,after this i will use oop,multi-thread,scrapy ways to do this douban read project">
+      <created>1593402310067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593402310067</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +281,8 @@
     <MESSAGE value="add some changes and find some bugs" />
     <MESSAGE value="i will fix it after getting knowledge of how to use proxy pool and skip the very" />
     <MESSAGE value="meituan very can judge selenium" />
-    <option name="LAST_COMMIT_MESSAGE" value="meituan very can judge selenium" />
+    <MESSAGE value="use requests to crawl the information about douban read,after this i will use oop,multi-thread,scrapy ways to do this douban read project" />
+    <option name="LAST_COMMIT_MESSAGE" value="use requests to crawl the information about douban read,after this i will use oop,multi-thread,scrapy ways to do this douban read project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/spider$12_reg_test.coverage" NAME="12_reg_test Coverage Results" MODIFIED="1587796446832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
