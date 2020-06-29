@@ -28,16 +28,16 @@ def get_xpath(url):
         'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36',
 
     }
-    driver.get(url)
-    # response = requests.get(url,headers=headers)
-    # if response.status_code == 200:
-    #     print(response.text)
-    #     return etree.HTML(response.text)
-    # else:
-    #     print(response.status_code)
-    #     return None
-    print(driver.page_source)
-    return driver.page_source
+    # driver.get(url)
+    response = requests.get(url,headers=headers)
+    if response.status_code == 200:
+        print(response.text)
+        return etree.HTML(response.text)
+    else:
+        print(response.status_code)
+        return None
+    # print(driver.page_source)
+    # return driver.page_source
 
 def parse_actor(html):
     """
@@ -80,7 +80,7 @@ def url_seen(url):
 def main():
 
     while not q_actor.empty():
-        html = etree.HTML(get_xpath(q_actor.get()))
+        html = get_xpath(q_actor.get())
         # 提取信息保存，获取相关人返回
         time.sleep(10)
         # driver.implicitly_wait(10)
@@ -95,13 +95,13 @@ def main():
 
 
 if __name__ == '__main__':
-    driver = webdriver.Chrome()
+    # driver = webdriver.Chrome()
     # start_urls
     actor_url = ['https://maoyan.com/films/celebrity/789',# 成龙
-                 'https://maoyan.com/films/celebrity/3718', # 安妮海瑟薇
-                 'https://maoyan.com/films/celebrity/28427', # 周杰伦
-                 'https://maoyan.com/films/celebrity/31444', # 宫崎骏
-                 'https://maoyan.com/films/celebrity/8681', # 马东锡
+                 # 'https://maoyan.com/films/celebrity/3718', # 安妮海瑟薇
+                 # 'https://maoyan.com/films/celebrity/28427', # 周杰伦
+                 # 'https://maoyan.com/films/celebrity/31444', # 宫崎骏
+                 # 'https://maoyan.com/films/celebrity/8681', # 马东锡
                  ]
     # 调度器
     q_actor = Queue()
