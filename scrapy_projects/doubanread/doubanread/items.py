@@ -11,4 +11,14 @@ import scrapy
 class DoubanreadItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    # pass
+    title = scrapy.Field()
+    book_url = scrapy.Field()
+    author = scrapy.Field()
+    wordCount = scrapy.Field()
+    desc = scrapy.Field()
+    read_num = scrapy.Field()
+    collect_num = scrapy.Field()
+    monthly_ticket = scrapy.Field()
+    total_ticket = scrapy.Field()
+    book_id = scrapy.Field()
