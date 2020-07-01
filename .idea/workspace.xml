@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44d7613d-8a44-43d2-8a42-faad8ba3e227" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/scheduler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider/codes/49_metaclass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/scheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,11 +63,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.49_metaclass">
+  <component name="RunManager" selected="Python.run">
     <configuration name="49_metaclass" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/codes" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -111,29 +108,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="py_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/proxy_pool/proxy_pool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proxy_pool/proxy_pool/db.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="getter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="py_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/proxy_pool/proxy_pool" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -141,6 +122,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="py_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/proxy_pool/proxy_pool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proxy_pool/proxy_pool/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,6 +153,9 @@
       <module name="py_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/proxy_pool/proxy_pool" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -172,6 +175,9 @@
       <module name="py_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/proxy_pool/proxy_pool" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -189,18 +195,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.49_metaclass" />
-      <item itemvalue="Python.db" />
       <item itemvalue="Python.getter" />
       <item itemvalue="Python.scheduler" />
       <item itemvalue="Python.settings" />
+      <item itemvalue="Python.run" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.getter" />
         <item itemvalue="Python.49_metaclass" />
         <item itemvalue="Python.scheduler" />
-        <item itemvalue="Python.getter" />
         <item itemvalue="Python.settings" />
-        <item itemvalue="Python.db" />
       </list>
     </recent_temporary>
   </component>
@@ -220,8 +226,17 @@
       <workItem from="1577519099952" duration="1387000" />
       <workItem from="1578972517026" duration="1237000" />
       <workItem from="1580559431786" duration="37000" />
-      <workItem from="1593487001678" duration="11427000" />
+      <workItem from="1593487001678" duration="12937000" />
+      <workItem from="1593607206452" duration="2357000" />
     </task>
+    <task id="LOCAL-00001" summary="the establishment of proxy pool and some knowledge of meta class">
+      <created>1593504390385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593504390385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,13 +247,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="the establishment of proxy pool and some knowledge of meta class" />
+    <option name="LAST_COMMIT_MESSAGE" value="the establishment of proxy pool and some knowledge of meta class" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/py_project$getter.coverage" NAME="getter Coverage Results" MODIFIED="1593505773052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy_pool/proxy_pool" />
     <SUITE FILE_PATH="coverage/py_project$table.coverage" NAME="table Coverage Results" MODIFIED="1577519268764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py_project$49_metaclass.coverage" NAME="49_metaclass Coverage Results" MODIFIED="1593501258997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/codes" />
     <SUITE FILE_PATH="coverage/py_project$demo.coverage" NAME="demo Coverage Results" MODIFIED="1575862397075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/demo" />

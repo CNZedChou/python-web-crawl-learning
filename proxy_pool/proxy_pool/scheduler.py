@@ -10,6 +10,8 @@
 ------------------------------------
 @ModifyTime     :  
 """
+import time
+from multiprocessing import Process
 from proxy_pool.proxy_pool.db import Redis_Client
 import asyncio
 import aiohttp
@@ -92,21 +94,60 @@ class PoolAdder(object):
                 break
             # 1. 调用crawler 获取代理,循环：关键是从哪里获取__crawler的这些爬取代理的方法名
             # 可以使用dir()方法得到属性名，然后选择想要的方法
-            attrs_crawl = dir(self.__crawler)
-            crawl_method = [x for x in attrs_crawl if 'crawl_' in x]
-            proxies = self.__crawler.crawl_ip3366()
+            # attrs_crawl = dir(self.__crawler)
+            # crawl_method = [x for x in attrs_crawl if 'crawl_' in x]
+            # proxies = self.__crawler.crawl_ip3366()
+            proxies_count = 0
+            for crawl_func in self.__crawler.__crawlfuncs__:
+                try:
+                    # 在底层方法没有进行try catch的处理
+                    proxies = self.__crawler.get_proxies(crawl_func)
+                except Exception:
+                    # 当一个方法不行的时候更换另一个方法
+                    continue
             # 2. 调用校验器检验并添加
             self.__tester.set_raw_proxies(proxies)
             self.__tester.tester()
+            proxies_count += len(proxies)
+            if proxies_count == 0:
+                print('代理网站全部失效,请添加新的代理网站获取代理')
+
+
+class Scheduler(object):
+    @staticmethod
+    def valid_proxy(cycle = CYCLE_VALID_TIME):
+        # 从代理池中取出之前爬取的一半，重新校验
+        conn = Redis_Client()
+        tester = VailidtyTester()
+        while True:
+            print('循环校验器开始工作')
+            # 取一半的长度
+            count = int(conn.queue_len * 0.5)
+            if count == 0:
+                print("代理池的数量不足，请添加")
+                time.sleep(cycle)
+            proxies = conn.get(count)
+            # 校验
+            tester.set_raw_proxies(proxies)
+            tester.tester()
+            time.sleep(cycle)
+
+
+    @staticmethod
+    def check_pool_add(lower_num = LOWER_NUM,upper_num = UPPER_NUM,cycle = CHECK_POOL_CYCLE):
+        conn = Redis_Client()
+        adder = PoolAdder(upper_num)
+        while True:
+            if conn.queue_len < lower_num:
+                adder.add_to_queue()
+            time.sleep(cycle)
 
 
 
-if __name__ == '__main__':
-    f = FreeProxyGetter()
-    proxies = f.crawl_ip3366()
-    # 设置内容
-    v = VailidtyTester()
-    v.set_raw_proxies(proxies)
-    v.tester()
+    def run(self):
+        valid_process = Process(target=Scheduler.valid_proxy)
+        check_process = Process(target=Scheduler.check_pool_add)
+        valid_process.start()
+        check_process.start()
 
 
