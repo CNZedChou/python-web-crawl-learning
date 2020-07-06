@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44d7613d-8a44-43d2-8a42-faad8ba3e227" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/getter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/proxy_pool/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/proxy_pool/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spider/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myRepo/python3.8-quick-start" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -227,7 +226,8 @@
       <workItem from="1578972517026" duration="1237000" />
       <workItem from="1580559431786" duration="37000" />
       <workItem from="1593487001678" duration="12937000" />
-      <workItem from="1593607206452" duration="2357000" />
+      <workItem from="1593607206452" duration="3841000" />
+      <workItem from="1594000045843" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="the establishment of proxy pool and some knowledge of meta class">
       <created>1593504390385</created>
@@ -236,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593504390385</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement the scheduler of proxy pool">
+      <created>1593609748362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593609748362</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +264,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the establishment of proxy pool and some knowledge of meta class" />
-    <option name="LAST_COMMIT_MESSAGE" value="the establishment of proxy pool and some knowledge of meta class" />
+    <MESSAGE value="implement the scheduler of proxy pool" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement the scheduler of proxy pool" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/py_project$getter.coverage" NAME="getter Coverage Results" MODIFIED="1593505773052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy_pool/proxy_pool" />

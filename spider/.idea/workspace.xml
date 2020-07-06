@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3684bec4-a397-449f-8a11-be6d600c7a98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/doubanread/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scrapy_projects/doubanread/scrapy.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,6 +217,7 @@
       <workItem from="1593353915217" duration="6091000" />
       <workItem from="1593395993012" duration="8189000" />
       <workItem from="1593419880277" duration="3204000" />
+      <workItem from="1594000033588" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="add some methods">
       <created>1593352980716</created>

@@ -11,9 +11,13 @@
 @ModifyTime     :  
 """
 from proxy_pool.proxy_pool.scheduler import Scheduler
+from proxy_pool.proxy_pool.api import app
+
+
 def main():
     s = Scheduler()
     s.run()
+    app.run()
 
 
 if __name__ == '__main__':
